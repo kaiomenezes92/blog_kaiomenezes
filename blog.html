@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog do Kaio Menezes</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" href="icon.jpg" type="jpg">
+</head>
+<body>
+    <header>        
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Sobre mim</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script type="text/javascript">
+    
+	diaA = new Array ("Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado")
+	mesA = new Array ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho","Julho", "Agosto","Setembro","Outubro", "Novembro", "Dezembro"); 
+
+	var dia, mes, ano, titulo, hora, minuto, segundo, postagem, excluir, divData, divPost, divTitulo, divHora, divExcluir;
+	        
+	        
+
+	function postar(){
+		titulo = document.getElementById("txtTitulo").value;
+		momentoAtual = new Date
+	            		
+		dia = diaA[momentoAtual.getDay()];
+		mes = mesA[momentoAtual.getMonth()];
+		ano = momentoAtual.getFullYear();
+
+		hora = momentoAtual.getHours();
+		minuto = momentoAtual.getMinutes();
+		segundo = momentoAtual.getSeconds();
+
+		if (hora < 10){ hora = "0" + hora;}
+		if (minuto < 10){ minuto = "0" + minuto;}
+		if (segundo < 10){ segundo = "0" + segundo;}
+			postagem = document.getElementById("txtPostagem").value;
+			divData = document.getElementById("divResultadoData");
+			divPost = document.getElementById("divResultadoPost");
+			divTitulo = document.getElementById("divResultadoTitulo");
+			divHora = document.getElementById("divResultadoHora");  			
+			divPost.innerText = postagem+"\n"
+			divTitulo.innerText = titulo.toUpperCase()+"\n";
+			divData.innerText = dia+", "+momentoAtual.getDate()+" de "+mes+" de "+ano+"";
+			divHora.innerText = "Às "+hora + " horas " + minuto + " minutos " + segundo+" segundos\n";
+	}
+             
+    </script>
+	</head>
+
+	<body>
+
+		<div id="blog">
+			<section id="section_corpo">
+				<div>
+					<header>
+						<a id="Identificação"></a>
+						<br><h2 class="forma" style="text-align: center; font-size: 500%; font-weight: bold">Postagens</h2><br><br>
+					</header>
+				</div>
+				<div style="text-align: center">
+					<label style="font-size: 170%; font-weight: bold; color: #ffffff">Título:</label><br>
+					<input type="text" id="txtTitulo"/><br><br>
+					<label style="font-weight: bold; font-size: 170%; color: #ffffff ">Conteúdo:</label><br>
+					<textarea rows="10" cols="40" maxlength="500" type="text" id="txtPostagem"/></textarea><br><br>
+					<button id="btnEnviar" value="1" onclick="postar();" >Postar</button><br><br>
+	
+				</div>
+				<article>
+					<div id="divResultadoTitulo" style="font-weight: bold;  color: #fffffe; font-size: 170%;text-align: center; padding: 2%">
+					</div>
+					
+	
+						<div id="divResultadoPost" style="font-weight: bold;  color: #ffffff; font-size: 100%; text-align: center; padding: 2%">
+						</div>
+						<div id="divResultadoData" style="font-weight: bold;  color: #ffffff; font-size: 100%; text-align: center;">
+						</div>
+						<div id="divResultadoHora" style="font-weight: bold;  color: #ffffff; font-size: 100%; text-align: center; padding-bottom: 10%;">
+						</div>
+	
+				</article>
+			</section>
+		</div>
+
+		
+
+    <footer>
+        <small>Feito por Kaio (2021)</small>
+    </footer>
+
+</body>
+</html>

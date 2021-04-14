@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0 auto; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+body {
+    margin: 0 auto; 
+    padding: 0;
+    background: url(back.png) no-repeat;
+    background-size: cover;
+}
+
+.box {
+    width: 450px;
+    height: 500px;
+    background: rgb(0, 0, 0, 0.4);
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+#about {
+    width: 80%;
+    background: rgb(0, 0, 0, 0.4);
+    padding: 2%;
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+#blog {
+    width: 80%;
+    background: rgb(0, 0, 0, 0.4);
+    padding: 2%;
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.box-img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+
+}
+
+.box h1 {
+    font-size: 40px;
+    letter-spacing: 4px;
+    font-weight: 100;
+}
+
+.box h5 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 100;
+}
+
+.box p {
+    text-align: justify;
+
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.box li {
+    display: inline-block;
+    margin: 6px;
+    list-style: none;
+}
+
+.box li a {
+    color: white;
+    text-decoration: none;
+    font-size: 60px;
+    transition: all ease-in-out 250ms;
+}
+
+.box li a:hover{
+    color: #b9b9b9;
+  }
+
+#menu {
+    background-color: rgb(37, 37, 39);
+}
+
+#menu ul {
+    max-width: 1500px;
+    list-style: none;
+    padding: 0;
+}
+
+#menu ul li {
+    display: inline;
+}
+
+
+#menu ul li a {
+    color: #FFF;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background .4s;
+}
+
+#menu ul li a:hover {
+    background-color: rgb(24, 139, 233);
+}
+
+footer {
+
+    background-color: rgb(37, 37, 39);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    text-align: center;
+    padding: 1%;
+    border-top: 1px solid #000000;
+}
+
+#icon {
+    display: inline-block;
+    margin: 6px;
+    list-style: none;
+}
+
+#icon a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    transition: all ease-in-out 250ms;
+}
+
+#icon a:hover{
+    color: #b9b9b9;
+  }
